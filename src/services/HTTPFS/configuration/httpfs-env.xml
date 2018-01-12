@@ -75,7 +75,7 @@ export HTTPFS_LOG={{ httpfs_log_dir }}
 export HTTPFS_TEMP=/tmp/httpfs
 
 # There is a full mess in other scripts about this variable. Don't change it!
-export CATALINA_PID=/run/hadoop-httpfs/hadoop-httpfs-httpfs.pid
+export CATALINA_PID=/var/run/hadoop-httpfs/hadoop-httpfs-httpfs.pid
 </value>
 	</property>
 </configuration>

@@ -78,16 +78,16 @@ class Httpfs_component(Script):
         self.install_packages(env)
     def stop(self, env):
         Logger.info("Stopping HttpFS service")
-        Execute("/usr/hdp/current/hadoop-httpfs/etc/init.d/hadoop-httpfs stop")
+        Execute("/usr/hdp/current/hadoop-httpfs/etc/rc.d/init.d/hadoop-httpfs stop")
     def start(self, env):
         import params
         self.configure(env)
         Logger.info("Starting HttpFS service")
-        Execute("/usr/hdp/current/hadoop-httpfs/etc/init.d/hadoop-httpfs start")
+        Execute("/usr/hdp/current/hadoop-httpfs/etc/rc.d/init.d/hadoop-httpfs start")
     def status(self, env):
         Logger.info("Getting status of HttpFS service")
         try:
-            Execute("/usr/hdp/current/hadoop-httpfs/etc/init.d/hadoop-httpfs status")
+            Execute("/usr/hdp/current/hadoop-httpfs/etc/rc.d/init.d/hadoop-httpfs status")
         except Fail:
             raise ComponentIsNotRunning()
 
